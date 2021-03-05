@@ -13,7 +13,6 @@ const handleApiCall =(req, res) => {
     })
     .catch(err => res.status(400).json('unable to work with API'))
 }
-
 const handleImage = (req, res, knex) => {
     const { id } = req.body;
     knex('users').where('id', '=', id)
@@ -24,6 +23,7 @@ const handleImage = (req, res, knex) => {
     })
     .catch(err => res.status(400).json('unable to get entries'))
 }
+
 
 module.exports = {
     handleImage,
