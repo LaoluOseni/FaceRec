@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(cors());
 
 //path handlers
-app.get('/', (req, res) => { res.send(knex.users) });
+app.get('/', (req, res) => { res.send('working') });
 
 app.post('/signin', signin.handleSignin(knex, bcrypt));
 
