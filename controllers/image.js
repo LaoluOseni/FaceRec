@@ -11,7 +11,8 @@ const handleApiCall =(req, res) => {
     .then(data => {
         res.json(data);
     })
-    .catch(err => res.status(400).json('unable to work with API'))
+    .catch(err => res.json(err))
+    //.catch(err => res.status(400).json('unable to work with API'))
 }
 const handleImage = (req, res, knex) => {
     const { id } = req.body;
