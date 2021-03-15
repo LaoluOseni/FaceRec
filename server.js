@@ -4,11 +4,11 @@ const app = express();
 const bcrypt = require('bcryptjs');
 const knex = require('knex')({
     client: 'pg',
-    connection: {
-      host : '127.0.0.1',
-      user : 'laoluoseni',
-      password : '',
-      database : 'facerec'
+    connection: { 
+      connectionString: process.env.DATABASE_URL,
+      ssl: {
+        rejectUnauthorized: false
+      }
     }
   });
 
