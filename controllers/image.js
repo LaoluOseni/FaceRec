@@ -2,7 +2,7 @@ const Clarifai = require('clarifai');
 //another problem with clarifai. There was a dot infront of Clarifai below
 
 const app = new Clarifai.App({
-    apiKey: '517997cb8ff044d8bcdfcb32c22c9422'
+    apiKey: ''
     //api key and image detection is implemented at backend for security
 });
 
